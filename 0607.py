@@ -54,6 +54,40 @@ while 1:
             show_message(device, msg, fill="white")
 
             time.sleep(0.5)
+            print('Canvas')
+    for i in words:
+        print(i, type(i))
+        with canvas(device) as draw:
+            #text(draw, (0, 0), "A", fill="white")
+            text(draw, (0, 0), i, fill="white")
+            
+        time.sleep(0.1)
+            
+        for _ in range(5):
+            for intensity in range(16):
+                device.contrast(intensity * 16)
+                time.sleep(0.5)
+
+    device.contrast(0x80)
+    time.sleep(1)
+
+    show_message(device, msg, fill="white", font=SINCLAIR_FONT)
+
+    time.sleep(1)
+    show_message(device, msg, fill="white", font=proportional(SINCLAIR_FONT))
+
+    time.sleep(1)
+    show_message(device, msg, fill="white", font=proportional(TINY_FONT))
+
+    time.sleep(1)
+    show_message(device, msg)
+
+    time.sleep(1)
+    for x in range(256):
+        with canvas(device) as draw:
+            text(draw, (0, 0), chr(x), fill="white")
+            time.sleep(0.1)
+            
     elif a == 'q':
         break
 
