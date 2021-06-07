@@ -18,7 +18,7 @@ while 1:
     if a == '1':
         mylcd.lcd_display_string("Hello World",1)
         mylcd.lcd_display_string("Raspberry Pi3 b+",2)
-        sleep(5)
+        time.sleep(5)
         mylcd.lcd_clear()
     elif a == '2':
         def demo(n, block_orientation, rotate, inreverse):
