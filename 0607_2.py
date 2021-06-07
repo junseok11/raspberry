@@ -16,6 +16,8 @@ x_adr = 0x32
 y_adr = 0x34
 z_adr = 0x36
 
+mylcd = LCD.lcd()
+a = input()
 
 # ADXL345 init
 def init_ADXL345():    
@@ -36,8 +38,7 @@ def measure_acc(adr):
     acc = acc * 3.9 / 1000
 
     return acc
-mylcd = LCD.lcd()
-a = input()
+
 def main():
     while 1:
         if a == '1':
