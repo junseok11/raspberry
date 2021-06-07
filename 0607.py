@@ -15,12 +15,12 @@ mylcd = LCD.lcd()
 a = input()
 
 while 1:
-    if a = '1':
+    if a == '1':
     mylcd.lcd_display_string("Hello World",1)
     mylcd.lcd_display_string("Raspberry Pi3 b+",2)
     sleep(5)
     mylcd.lcd_clear()
-    elif a = '2':
+    elif a == '2':
         def demo(n, block_orientation, rotate, inreverse):
             # create matrix device
             serial = spi(port=0, device=0, gpio=noop())
@@ -87,7 +87,7 @@ while 1:
                 with canvas(device) as draw:
                     text(draw, (0, 0), chr(x), fill="white")
                     time.sleep(0.1)
-    elif a = 'q':
+    elif a == 'q':
         break:
 
 if __name__ == "__main__":
