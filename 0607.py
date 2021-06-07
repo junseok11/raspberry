@@ -88,7 +88,7 @@ while 1:
                     text(draw, (0, 0), chr(x), fill="white")
                     time.sleep(0.1)
     elif a == 'q':
-        break:
+        break():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='matrix_demo arguments',
